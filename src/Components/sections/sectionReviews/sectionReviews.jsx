@@ -18,7 +18,14 @@ const SectionReviews = () => {
             />
                 <p>"Adorei o suporte premium, muito prático e resistente."</p>
                 <span>- Ana, Gamer</span>
-            <Card />            
+            <Card />        
+            <Card
+            className= 'reviews-card fade-up'
+            /> 
+                <p>"Adorei o suporte premium, muito prático e resistente."</p>
+                <span>- Carlos, Gamer</span>
+            
+            <Card/>    
         </div>
     </section>
   )
