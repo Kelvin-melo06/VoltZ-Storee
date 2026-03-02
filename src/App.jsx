@@ -1,12 +1,12 @@
 import "./App.css";
-import Header from "./Components/header/header.jsx";
-import SectionPai from "./Components/sections/sectionPai.jsx";
+import Header from "./Components/Layout/header/header";
+import HomeSections from "./Components/sections/HomeSections.jsx";
 
 function App() {
   return (
     <div>
       <Header />
-      <SectionPai />
+      <HomeSections />
     </div>
   );
 }

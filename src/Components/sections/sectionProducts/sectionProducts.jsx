@@ -1,6 +1,6 @@
 import "./sectionProducts.css";
-import Card from "../../Card/card";
-import Button from "../../button/button";
+import Card from "../../ui/Card/card";
+import Button from "../../ui/button/button";
 
 const SectionProducts = () => {
   return (
@@ -22,7 +22,9 @@ const SectionProducts = () => {
 
           <Card
             className="product-card fade-up"
-            ActionButton={() => <Button className="add-button" text="Comprar" />}
+            ActionButton={() => (
+              <Button className="add-button" text="Comprar" />
+            )}
           >
             <div className="product-image">🖱️</div>
             <h3 className="product-name">Mouse Gamer Elite</h3>
