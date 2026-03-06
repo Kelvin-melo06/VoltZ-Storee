@@ -4,7 +4,7 @@ import Button from "../../ui/button/button";
 const SectionNewsletter = () => {
   return (
     <section className="newsletter-section fade-up" id="newsletter">
-      <h2 class="section-title fade-up">Assine nossa Newsletter</h2>
+      <h2 className="section-title fade-up">Assine nossa Newsletter</h2>
       <p>Receba promoções e novidades direto no seu email ⚡</p>
 
       <form className="newsletter-form">

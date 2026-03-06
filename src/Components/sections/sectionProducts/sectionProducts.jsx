@@ -1,14 +1,19 @@
 import "./sectionProducts.css";
 import Card from "../../ui/Card/card";
-import Button from "../../ui/button/button";
-
-
+import { getProducts} from '../../../services/products.js';
+import { useEffect, useState } from "react";
+ 
 const SectionProducts = ({handleAddToCart}) => {
-  const products = [
-    { id: 1, name: "Headset Pro X", price: 599.0 },
-    { id: 2, name: "Mouse Gamer Elite", price: 499.9 },
-    { id: 3, name: "Mouse Gamer Elite (Oferta)", price: 499.9 },
-  ];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() =>{
+    async function loadProducts(){
+      const data = await getProducts();
+      setProducts(data);
+    }
+    loadProducts();
+  }, []);
+
   return (
     <div>
       <section className="products-section fade-up" id="products">

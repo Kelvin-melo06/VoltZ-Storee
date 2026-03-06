@@ -1,20 +1,17 @@
-
-
-const Card = ({children, className, buttonText, onButtonClick, ...props}) => {
+const Card = ({ children, className, buttonText, onButtonClick, ...props }) => {
   return (
     <>
-      <div 
-      className=
-      {`card
+      <div
+        className={`card
         ${className || ""}`}
-        {...props}>
-
+        {...props}
+      >
         {children}
 
-        {buttonText && <button onClick={onButtonClick}> {buttonText}</button>}
+        {buttonText && <Button text={buttonText} onClick={onButtonClick} />}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

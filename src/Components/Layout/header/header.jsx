@@ -1,9 +1,21 @@
 import { Icon } from "../../ui/icon/Icon.jsx";
 import { FaShoppingCart, FaBars } from "react-icons/fa";
 import Nav from "../nav/nav.jsx";
+import CartModal from "../../ui/modal/CartModal.jsx";
+import { useState } from "react";
 import "./header.css";
 
-const Header = ({ cart }) => {
+const Header = ({ cart, handleRemoveFromCart }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   return (
     <>
       <header id="header">
@@ -14,10 +26,15 @@ const Header = ({ cart }) => {
 
         <div className="header-icons">
           <div id="cart-icon" className="cart-shopping">
-            <Icon icone={FaShoppingCart} size={24} color="#00BFFF" />
+            <Icon
+              icone={FaShoppingCart}
+              size={24}
+              color="#00BFFF"
+              onClick={openModal}
+            />
 
             <span id="cart-count" className="cart-count">
-              {cart.length}
+              {cartCount}
             </span>
           </div>
 
@@ -27,6 +44,14 @@ const Header = ({ cart }) => {
         </div>
 
         <Nav />
+
+        {isModalOpen && (
+          <CartModal
+            cart={cart}
+            handleRemoveFromCart={handleRemoveFromCart}
+            closeModal={closeModal}
+          />
+        )}
       </header>
     </>
   );
