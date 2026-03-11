@@ -9,7 +9,7 @@ import SectionFaq from './sectionFaq/sectionFaq'
 
 const HomeSections = () => {
   return (
-    <main>
+    <main className='pt-[80px]'>
       
         <SectionHero />
         <SectionProducts />

@@ -1,11 +1,1 @@
-<<<<<<< HEAD
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-=======
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
->>>>>>> e9ac67957cc446aaabe560e5c93fb80c3992e408
+@import "tailwindcss";

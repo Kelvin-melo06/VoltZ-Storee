@@ -5,11 +5,7 @@ import { useEffect, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { useContext } from "react";
  
-<<<<<<< HEAD
 const SectionProducts = () => {
-=======
-const SectionProducts = ({}) => {
->>>>>>> e9ac67957cc446aaabe560e5c93fb80c3992e408
   const [products, setProducts] = useState([]);
   const { addToCart } = useContext(CartContext);
 
