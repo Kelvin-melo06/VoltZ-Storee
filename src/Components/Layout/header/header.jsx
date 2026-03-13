@@ -8,7 +8,7 @@ import { useContext, useState, useEffect } from "react";
 
 const Header = () => {
   const { cart } = useContext(CartContext);
-  const { isModalOpen, openModal } = useContext(ModalContext);
+  const { openModal } = useContext(ModalContext);
 
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
@@ -68,7 +68,7 @@ const Header = () => {
           />
         )}
 
-        {isModalOpen && <CartModal />}
+        
       </header>
     </>
   );

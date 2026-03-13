@@ -18,7 +18,7 @@ const Nav = ({ menu }) => {
         shadow-md
       `}
     >
-      <ul className="flex flex-col md:flex-row gap-4 p-8 md:p-0 bg-[#0d0d0d]">
+      <ul className="flex flex-col md:flex-row gap-4 p-8 md:p-0 bg-[#0d0d0d] rounded-br-[20px]">
         {links.map((link) => (
           <li key={link.href}>
             <a
