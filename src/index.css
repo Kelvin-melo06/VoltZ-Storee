@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+body{
+  background-color: rgba(3, 3, 3, 0.99)
+}
 @layer components {
   .cart-neon {
     animation: modalScale 0.25s ease;
