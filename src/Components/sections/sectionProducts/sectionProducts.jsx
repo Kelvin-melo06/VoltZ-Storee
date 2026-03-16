@@ -27,6 +27,7 @@ const SectionProducts = () => {
       px-[5%]
       bg-[#0D0D0D]
       fade-up
+      text-center
       ">
         <SectionTitle>
            Produtos em destaque

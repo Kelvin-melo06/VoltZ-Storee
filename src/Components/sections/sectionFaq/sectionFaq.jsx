@@ -60,7 +60,7 @@ const SectionFaq = () => {
             >
               {faq.question}
             </h3>
-
+            
             <p
               className={`
               font-light overflow-hidden transition-all duration-300
