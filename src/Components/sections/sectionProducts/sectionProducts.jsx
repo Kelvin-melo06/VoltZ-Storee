@@ -3,6 +3,7 @@ import Card from "../../ui/Card/card";
 import { getProducts} from '../../../services/products.js';
 import { useEffect, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
+import SectionTitle from "../../ui/SectionTitle.jsx";
 import { useContext } from "react";
  
 const SectionProducts = () => {
@@ -27,17 +28,9 @@ const SectionProducts = () => {
       bg-[#0D0D0D]
       fade-up
       ">
-        <h2 
-        className="
-        text-4xl
-        font-bold
-        tex-center
-        text-[#F2F2F2]
-        mb-12
-        fade-up
-        ">
-          Produtos em destaque
-        </h2>
+        <SectionTitle>
+           Produtos em destaque
+        </SectionTitle>
 
         <div 
         className ="

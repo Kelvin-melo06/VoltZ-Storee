@@ -1,6 +1,7 @@
 import "./sectionOffers.css";
 import Card from "../../ui/Card/card";
 import Button from "../../ui/Button/Button.jsx";
+import SectionTitle from "../../ui/SectionTitle.jsx";
 
 const SectionOffers = () => {
   return (
@@ -12,19 +13,7 @@ const SectionOffers = () => {
      fade-up"
       id="offers"
     >
-      <h2
-        className="
-      font-['Orbitron']
-      text-3xl
-      md:text-4xl
-      text-center
-      mb-12
-      text-[#F2F2F2]
-      fade-up
-      "
-      >
-        Ofertas Da Semana
-      </h2>
+      <SectionTitle>Ofertas Da Semana</SectionTitle>
       <div
         className="
       grid
@@ -113,7 +102,8 @@ const SectionOffers = () => {
             top-4
           "
           >
-            De <span className="line-through text-gray-400">R$ 599,90</span> por <span className="text-[#00BFFF] text-xl font-bold">R$ 499,90</span>
+            De <span className="line-through text-gray-400">R$ 599,90</span> por{" "}
+            <span className="text-[#00BFFF] text-xl font-bold">R$ 499,90</span>
           </p>
         </Card>
       </div>

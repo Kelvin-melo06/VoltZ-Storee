@@ -1,5 +1,6 @@
 import "./sectionReviews.css";
 import Card from "../../ui/Card/card";
+import SectionTitle from "../../ui/SectionTitle";
 
 const SectionReviews = () => {
   return (
@@ -12,19 +13,9 @@ const SectionReviews = () => {
     fade-up
     "
     >
-      <h2
-        className="
-        font-['Orbitron']
-        text-3xl
-        md:text-4xl
-        text-center
-        mb-12
-        text-[#F2F2F2]
-        fade-up
-      "
-      >
+      <SectionTitle>
         O que Dizem nossos clientes:
-      </h2>
+      </SectionTitle>
       <div
         className="
       grid
