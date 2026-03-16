@@ -1,0 +1,29 @@
+.reviews-card {
+  background: rgba(26, 26, 26, 0.7);
+  border-radius: 10px 10px 10px 40px;
+  padding: 2rem;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  animation: flutuante 3s ease-in-out infinite;
+}
+
+.reviews-card:hover {
+  border-color: #00bfff;
+  box-shadow: 0 10px 40px rgba(0, 191, 255, 0.4);
+}
+
+.reviews-card > p{
+    position: relative;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #F2F2F2;
+    font-weight: bolder;
+}
+.reviews-card > span{
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+    color: #5CE1E6;
+}
