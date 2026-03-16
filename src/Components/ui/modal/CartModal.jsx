@@ -1,9 +1,8 @@
 import "./CartModal.css";
-import Button from "../button/button";
-import { CartContext } from "../../../context/CartContext";
-import { useContext } from "react";
-import { ModalContext } from "../../../context/ModalContext";
-import { useEffect } from "react";
+import Button from "@/Components/ui/button/Button.jsx";
+import { CartContext } from "@/context/CartContext.jsx";
+import { ModalContext } from "@/context/ModalContext.jsx";
+import { useContext, useEffect } from "react";
 
 const CartModal = () => {
   const { cart, removeFromCart } = useContext(CartContext);

@@ -1,7 +1,7 @@
 import "./sectionAbout.css";
-import { Icon } from "../../ui/icon/Icon.jsx";
+import { Icon } from "@/Components/ui/icon/Icon.jsx";
 import { FaRocket, FaLightbulb, FaShieldAlt } from "react-icons/fa";
-import SectionTitle from '../../ui/SectionTitle.jsx'
+import SectionTitle from "@/Components/ui/SectionTitle.jsx";
 
 const SectionAbout = () => {
   return (

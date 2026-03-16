@@ -1,5 +1,5 @@
-import  CartProvider  from "../CartContext"
-import  ModalProvider  from "../ModalContext"
+import CartProvider from "@/context/CartContext.jsx";
+import ModalProvider from "@/context/ModalContext.jsx";
 
 const AppProviders = ({children}) => {
   return (

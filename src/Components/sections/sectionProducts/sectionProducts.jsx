@@ -1,10 +1,9 @@
 import "./sectionProducts.css";
-import Card from "../../ui/Card/card";
-import { getProducts} from '../../../services/products.js';
-import { useEffect, useState } from "react";
-import { CartContext } from "../../../context/CartContext";
-import SectionTitle from "../../ui/SectionTitle.jsx";
-import { useContext } from "react";
+import Card from "@/Components/ui/Card/card.jsx";
+import { getProducts } from "@/services/products.js";
+import { useEffect, useState, useContext } from "react";
+import { CartContext } from "@/context/CartContext";
+import SectionTitle from "@/Components/ui/SectionTitle.jsx";
  
 const SectionProducts = () => {
   const [products, setProducts] = useState([]);

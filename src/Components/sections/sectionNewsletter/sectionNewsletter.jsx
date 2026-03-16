@@ -1,6 +1,6 @@
 import "./sectionNewsletter.css";
-import Button from "../../ui/button/button";
-import SectionTitle from "../../ui/SectionTitle";
+import Button from "@/Components/ui/button/Button.jsx";
+import SectionTitle from "@/Components/ui/SectionTitle.jsx";
 
 const SectionNewsletter = () => {
   return (

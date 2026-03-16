@@ -1,5 +1,4 @@
-import Button from "../button/Button";
-
+import Button from "@/Components/ui/button/Button.jsx";
 const Card = ({
   children,
   className,

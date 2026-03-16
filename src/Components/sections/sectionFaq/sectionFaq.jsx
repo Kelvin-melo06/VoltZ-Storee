@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SectionTitle from "../../ui/SectionTitle";
+import SectionTitle from "@/Components/ui/SectionTitle.jsx";
 
 const faqs = [
   {

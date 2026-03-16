@@ -1,8 +1,8 @@
-import { Icon } from "../../ui/icon/Icon.jsx";
+import { Icon } from "@/Components/ui/icon/Icon.jsx";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
-import Nav from "../nav/nav.jsx";
-import { CartContext } from "../../../context/CartContext.jsx";
-import { ModalContext } from "../../../context/ModalContext.jsx";
+import Nav from "@/Components/Layout/nav/nav.jsx";
+import { CartContext } from "@/context/CartContext.jsx";
+import { ModalContext } from "@/context/ModalContext.jsx";
 import { useContext, useState, useEffect } from "react";
 
 const Header = () => {
