@@ -1,5 +1,6 @@
 import "./sectionOffers.css";
 import Card from "../../ui/Card/card.jsx";
+import Button from '../../ui/button/Button.jsx'
 import SectionTitle from "../../ui/SectionTitle.jsx";
 
 const SectionOffers = () => {
