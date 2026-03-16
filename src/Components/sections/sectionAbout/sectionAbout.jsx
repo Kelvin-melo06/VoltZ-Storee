@@ -1,50 +1,63 @@
 import "./sectionAbout.css";
 import { Icon } from "../../ui/icon/Icon.jsx";
 import { FaRocket, FaLightbulb, FaShieldAlt } from "react-icons/fa";
+import SectionTitle from '../../ui/SectionTitle.jsx'
 
 const SectionAbout = () => {
   return (
-    <section className="about-section fade-up" id="about">
-      <h2
-        className="
-      section-title
-      fade-up"
-      >
+    <section className="
+    py-[20px]
+    px-[5%]
+    bg-[#0D0D0D]
+    text-center 
+    fade-up
+    " 
+    id="about">
+      <SectionTitle>
         Sobre a VoltZ Store
-      </h2>
+      </SectionTitle>
 
-      <p>
-        criadores de conteúdo e entusiastas de gadgets. Buscamos qualidade,
+      <p 
+      className="
+      text-[20px]
+      text-white
+      ">
+        Criadores de conteúdo e entusiastas de gadgets. Buscamos qualidade,
         inovação e design moderno em cada produto.
       </p>
 
-      <div className="about-icons">
+      <div className="
+      flex
+      justify-center
+      gap-12
+      mt-8
+      flex-wrap
+      animation-[flutuante_3s_ease-in-out_infinite]
+      fade-up
+      ">
         <div className="icon-box">
           <Icon
             icone={FaRocket}
-            size={32}
+            size={52}
             color="#00BFFF"
-            className="icon-Alone"
           />
-          <p>Entrega rápida</p>
+          <p className="text-2xl mt-4">Entrega rápida</p>
         </div>
 
         <div className="icon-box">
           <Icon
             icone={FaLightbulb}
-            size={32}
+            size={52}
             color="#FFD700"
-            className="icon-Alone"
           />
-          <p>Produtos inovadores</p>
+          <p className="text-2xl mt-4">Produtos inovadores</p>
         </div>
 
         <div className="icon-box">
           <Icon
             icone={FaShieldAlt}
-            size={32}
+            size={52}
             color="#808080"
-            className="icon-Alone"
           />
           <p>Garantia e suporte</p>
         </div>
