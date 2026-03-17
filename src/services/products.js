@@ -15,7 +15,8 @@ export const products = [
     id: 3, 
     name: "Mouse Gamer Elite (Oferta)", 
     price: 499.9,
-    img: '🖱️'
+    img: '🖱️',
+    offer:true
 },
 ];
 
