@@ -43,12 +43,15 @@ const SectionOffers = () => {
         gap-10
         mt-12
         [grid-template-columns:repeat(auto-fit, minmax(300px, 1fr))]
+        justify-items-center
         "
       >
 
         <Card
           className="
           group
+          w-full
+          max-w-[1000px]
           bg-[#1A1A1A]
           rounded-[20px]
           p-8
@@ -113,6 +116,9 @@ const SectionOffers = () => {
           duration-300
           group-hover:scale-105
           group-hover:drop-shadow-[0_0_20px_#00BFFF]
+
+          md:group-hover:scale-90
+
           ">
             {product.img}
           </div>

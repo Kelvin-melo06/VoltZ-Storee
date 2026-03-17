@@ -20,7 +20,8 @@ const SectionFaq = () => {
   };
 
   return (
-    <section className="py-20 px-[5%] bg-[#0D0D0D] text-center" id="faq">
+    <section className="py-20 px-[5%] bg-[#0D0D0D] text-center md:flex md:flex-col  md:items-center
+    " id="faq">
       <SectionTitle>Perguntas Frequentes</SectionTitle>
 
       {faqs.map((faq, index) => {
@@ -35,6 +36,8 @@ const SectionFaq = () => {
             rounded-[15px]
             p-[1.8rem]
             mb-6
+            w-full
+            max-w-[1200px]
             cursor-pointer
             transition-all
             duration-300
