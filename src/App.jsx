@@ -1,4 +1,4 @@
-import Header from "@/Components/Layout/header/header";
+import Header from "@/Components/Layout/Header/Header.jsx";
 import HomeSections from "@/Components/sections/HomeSections.jsx";
 import useFadeUp from "@/hooks/useFadeUp.js";
 import "@/Components/ui/modal/CartModal.jsx";
