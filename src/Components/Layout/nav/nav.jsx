@@ -12,22 +12,34 @@ const Nav = ({ menu }) => {
   return (
     <nav
       className={`
-        fixed top-[72px] left-0 h-[calc(100%-72px)] w-64 bg-[#0d0d0d] z-50 transform transition-transform duration-300 ease-in-out
+        fixed top-[72px] left-0 h-[calc(100%-72px)] w-64 bg-[#0d0d0d]
+        transform transition-transform duration-300 ease-in-out z-50
         ${menu ? "translate-x-0" : "-translate-x-full"}
-        md:translate-x-0 md:relative md:h-auto md:w-auto md:flex
-        shadow-md
+
+        min-[878px]:static
+        min-[878px]:h-auto
+        min-[878px]:w-auto
+        min-[878px]:translate-x-0
+        min-[878px]:bg-transparent
       `}
     >
-      <ul className="flex flex-col md:flex-row gap-4 p-8 md:p-0 bg-[#0d0d0d] rounded-br-[20px]">
+      <ul
+        className="
+          flex flex-col gap-6 p-8
+          min-[878px]:flex-row
+          min-[878px]:items-center
+          min-[878px]:p-0
+        "
+      >
         {links.map((link) => (
           <li key={link.href}>
             <a
               href={link.href}
               className="
                 text-white font-medium relative
-                after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] 
-                after:bg-[#00BFFF] after:drop-shadow-[0_0_8px_#00BFFF] 
-                after:transition-all after:duration-300 hover:after:w-full
+                after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
+                after:bg-[#00BFFF] after:transition-all after:duration-300
+                hover:after:w-full
               "
             >
               {link.label}
