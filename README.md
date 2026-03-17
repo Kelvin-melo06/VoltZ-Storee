@@ -2,7 +2,6 @@
 <img src="https://readme-typing-svg.herokuapp.com?font=Bitcount+Grid+Single&size=35&pause=1000&color=0B79D9&center=true&width=700&lines=⚡VoltZ+Store⚡;React+E-commerce+Concept;Modern+Frontend+Architecture" />
 </a>
 
-
 <p align="center">
 E-commerce conceitual de acessórios tech/gamer desenvolvido com <b>React</b>.
 </p>
@@ -13,13 +12,17 @@ Projeto focado em <b>componentização</b>, <b>responsividade</b> e <b>UI futuri
 
 ---
 
-## 🚀 Deploy
+## <a href="https://git.io/typing-svg">
+<img src="https://readme-typing-svg.herokuapp.com?font=Bitcount+Grid+Single&size=28&pause=1000&color=0B79D9&width=435&lines=⚡Deploy⚡" />
+</a>
 
 🔗 volt-z-storee.vercel.app
 
 ---
 
-## 🖼️ Preview
+## <a href="https://git.io/typing-svg">
+<img src="https://readme-typing-svg.herokuapp.com?font=Bitcount+Grid+Single&size=28&pause=1000&color=0B79D9&width=435&lines=⚡Preview⚡" />
+</a>
 
 <img src="./preview.png" alt="Preview VoltZ Store"/>
 
@@ -69,19 +72,33 @@ Projeto focado em <b>componentização</b>, <b>responsividade</b> e <b>UI futuri
 </a>
 
 
+```bash
 src
-├ components
-│ ├ layout
-│ ├ sections
-│ └ ui
+├── components
+│   ├── layout
+│   │   ├── header
+│   │   └── footer
+│   │
+│   ├── sections
+│   │   ├── hero
+│   │   ├── products
+│   │   ├── offers
+│   │   ├── reviews
+│   │   ├── faq
+│   │   └── newsletter
+│   │
+│   └── ui
+│       ├── button
+│       └── modal
 │
-├ context
-│ └ CartContext
+├── context
+│   └── CartContext.jsx
 │
-├ hooks
-│ └ useFadeUp
+├── hooks
+│   └── useFadeUp.js
 │
-└ App.jsx
+└── App.jsx
+```
 
 
 Estrutura modular baseada em **componentização React**, permitindo escalabilidade e manutenção eficiente.
@@ -105,9 +122,9 @@ Estrutura modular baseada em **componentização React**, permitindo escalabilid
 
 **Kelvin**
 
-GitHub  
-https://github.com/seuusuario
+Linkedin  
+www.linkedin.com/in/06kelvin-melo
 
 ---
 
-⭐ Se gostou do projeto, deixe uma estrela no repositório.
+⭐ Se gostou do projeto, deixe uma estrela no repositório!
