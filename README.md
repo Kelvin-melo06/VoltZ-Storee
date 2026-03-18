@@ -16,7 +16,7 @@ Projeto focado em <b>componentização</b>, <b>responsividade</b> e <b>UI futuri
 <img src="https://readme-typing-svg.herokuapp.com?font=Bitcount+Grid+Single&size=28&pause=1000&color=0B79D9&width=435&lines=⚡Deploy⚡" />
 </a>
 
-🔗 volt-z-storee.vercel.app
+🔗 https://volt-z-storee.vercel.app/
 
 ---
 
