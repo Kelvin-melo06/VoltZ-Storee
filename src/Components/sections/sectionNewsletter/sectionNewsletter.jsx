@@ -1,4 +1,3 @@
-import "./sectionNewsletter.css";
 import Button from "@/Components/ui/button/Button.jsx";
 import SectionTitle from "@/Components/ui/SectionTitle.jsx";
 

@@ -16,6 +16,7 @@ const SectionHero = () => {
       bg-gradient-to-br
       from-[#0D0D0D]
       to-[#1A1A1A]
+      fade-up
     "
     >
       <div className="hero-glow"></div>
@@ -25,7 +26,6 @@ const SectionHero = () => {
         mx-auto
         text-center
         z-10
-        fade-up
         px-6
         "
       >

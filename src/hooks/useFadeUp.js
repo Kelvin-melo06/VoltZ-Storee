@@ -1,26 +1,36 @@
 import { useEffect } from "react";
 
 function useFadeUp() {
-
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up");
 
-    const observer = new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-            if(entry.isIntersecting){
-                entry.target.classList.add("show");
-            }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
         });
-    }, {threshold: 0.2});
+      },
+      { threshold: 0.2 },
+    );
 
-    elements.forEach((el)=>{observer.observe(el)});
+    const observeElements = () => {
+      const elements = document.querySelectorAll(".fade-up:not(.show)");
 
-    return ()=> {
-        elements.forEach((el)=>{observer.unobserve(el)});
-    }
+      elements.forEach((el) => observer.observe(el));
+    };
 
+    observeElements();
+
+    const mutationObserver = new MutationObserver(observeElements);
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mutationObserver.disconnect();
+    };
   }, []);
-
 }
 
 export default useFadeUp;

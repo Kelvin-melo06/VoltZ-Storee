@@ -27,6 +27,7 @@ const SectionReviews = () => {
         <Card
           className="
         reviews-card
+        fade-up
         "
         >
           <p>
@@ -39,7 +40,8 @@ const SectionReviews = () => {
         </Card>
         <Card
           className="
-        reviews-card fade-up
+        reviews-card 
+        fade-up
         "
         >
           <p className="relative pl-5 italic">

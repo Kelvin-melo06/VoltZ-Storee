@@ -23,21 +23,6 @@
   }
 }
 
-.fade-up {
-  animation: fadeUp 2s ease;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .hero::after {
   content: "";
   position: absolute;

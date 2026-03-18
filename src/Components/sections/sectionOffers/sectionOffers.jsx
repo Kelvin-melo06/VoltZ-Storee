@@ -1,4 +1,3 @@
-import "./sectionOffers.css"
 import Card from "@/Components/ui/Card/card.jsx"
 import SectionTitle from "@/Components/ui/SectionTitle.jsx"
 import { useContext, useEffect, useState } from "react";

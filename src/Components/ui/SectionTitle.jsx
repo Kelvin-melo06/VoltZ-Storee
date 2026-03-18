@@ -26,6 +26,7 @@ const SectionTitle = ({children}) => {
     after:transition-all
     after:duration-300
     hover:after:w-[120px]
+    fade-up
     ">
         {children}
     </div>

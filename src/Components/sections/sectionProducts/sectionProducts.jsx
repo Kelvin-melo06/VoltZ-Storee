@@ -90,6 +90,7 @@ const SectionProducts = () => {
             hover:border-[#00BFFF]
             hover:shadow-[0_10px_40px_rgba(0,191,255,0.4)]
             hover:-translate-y-1
+            fade-up
             "
           >
 

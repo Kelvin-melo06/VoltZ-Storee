@@ -20,7 +20,7 @@ const SectionFaq = () => {
   };
 
   return (
-    <section className="py-20 px-[5%] bg-[#0D0D0D] text-center md:flex md:flex-col  md:items-center
+    <section className="py-20 px-[5%] bg-[#0D0D0D] text-center md:flex md:flex-col  md:items-center fade-up
     " id="faq">
       <SectionTitle>Perguntas Frequentes</SectionTitle>
 
