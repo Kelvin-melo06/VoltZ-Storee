@@ -30,39 +30,38 @@ function App() {
   return (
     <div>
 
-      /**
-       * Header:
-       * -------
-       * Componente de navegação principal do site.
-       * Contém logo, menu e interações iniciais.
-       */
+      {/* 
+        Header:
+        -------
+        Componente de navegação principal do site.
+        Contém logo, menu e interações iniciais.
+      */}
       <Header />
 
-      /**
-       * CartModal:
-       * ----------
-       * Componente responsável pelo modal do carrinho.
-       *
-       * Ele está conectado ao ModalContext, permitindo abrir/fechar
-       * o modal e exibir os produtos adicionados ao carrinho.
-       */
+      {/* 
+        CartModal:
+        ----------
+        Componente responsável pelo modal do carrinho.
+
+        Ele está conectado ao ModalContext, permitindo abrir/fechar
+        o modal e exibir os produtos adicionados ao carrinho.
+      */}
       <CartModal />
 
-      /**
-       * HomeSections:
-       * -------------
-       * Componente que reúne todas as seções da página inicial,
-       * como:
-       * - Hero
-       * - Produtos
-       * - Reviews
-       * - Ofertas
-       * - Newsletter
-       * - About
-       * - FAQ
-       *
-       * Ele funciona como o "corpo" principal do site.
-       */
+      {/* 
+        HomeSections:
+        -------------
+        Componente que reúne todas as seções da página inicial:
+        - Hero
+        - Produtos
+        - Reviews
+        - Ofertas
+        - Newsletter
+        - About
+        - FAQ
+
+        Funciona como o "corpo" principal do site.
+      */}
       <HomeSections />
 
     </div>
