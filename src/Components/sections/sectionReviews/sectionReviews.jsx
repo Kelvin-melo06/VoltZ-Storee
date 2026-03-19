@@ -1,9 +1,23 @@
+/**
+ * SectionReviews.jsx
+ * ----------------------------------------
+ * Componente responsável por exibir a seção de depoimentos (reviews) do site.
+ *
+ * Diferente de outras seções, os dados aqui são estáticos,
+ * ou seja, não vêm de uma API, mas sim de uma array local.
+ */
+
 import "./sectionReviews.css";
 import Card from "../../ui/Card/card";
 import SectionTitle from "../../ui/SectionTitle";
-import { data } from "autoprefixer";
 
 const SectionReviews = () => {
+
+  /**
+   * reviews:
+   * --------
+   * Array de dados contendo os depoimentos dos clientes.
+   */
   const reviews = [
     {
       id: 1,
@@ -18,24 +32,49 @@ const SectionReviews = () => {
       pessoa: "- Laura, Gamer",
     },
   ];
+
   return (
     <section
       id="reviews"
       className="
-    py-20
-    px-[5%]
-    bg-[#0D0D0D]
-    fade-up
-    "
+        py-20
+        px-[5%]
+        bg-[#0D0D0D]
+        fade-up
+      "
     >
-      <SectionTitle>O que Dizem nossos clientes:</SectionTitle>
 
-      <div className="grid gap-10 mt-12 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+      {/* SectionTitle: título da seção */}
+      <SectionTitle>
+        O que dizem nossos clientes:
+      </SectionTitle>
+
+      <div className="
+        grid
+        gap-10
+        mt-12
+        [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]
+      ">
+
+        {/* Renderização dos reviews */}
         {reviews.map((rev) => (
-          <Card key={rev.pessoa} className="reviews-card fade-up w-full md:max-w-[600px] mx-auto">
+
+          <Card
+            key={rev.id}
+            className="
+              reviews-card
+              fade-up
+              w-full
+              md:max-w-[600px]
+              mx-auto
+            "
+          >
+
+            {/* Conteúdo do review */}
             <p>
               <span>{rev.img}</span> {rev.p} {rev.pessoa}
             </p>
+
           </Card>
         ))}
       </div>
