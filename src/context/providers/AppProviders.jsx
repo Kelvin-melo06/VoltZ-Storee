@@ -13,37 +13,34 @@ import ModalProvider from "@/context/ModalContext.jsx";
 
 const AppProviders = ({ children }) => {
   return (
-
-    /**
-     * CartProvider:
-     * -------------
-     * Responsável por disponibilizar o estado e as funções relacionadas
-     * ao carrinho para toda a aplicação.
-     */
-
     <CartProvider>
-
-      /**
-       * ModalProvider:
-       * --------------
-       * Responsável por controlar o estado do modal (aberto/fechado)
-       * e disponibilizar essas informações globalmente.
-       */
+      {/*
+        CartProvider:
+        -------------
+        Responsável por disponibilizar o estado e as funções relacionadas
+        ao carrinho para toda a aplicação.
+      */}
 
       <ModalProvider>
+        {/*
+          ModalProvider:
+          --------------
+          Responsável por controlar o estado do modal (aberto/fechado)
+          e disponibilizar essas informações globalmente.
+        */}
 
-        /**
-         * children:
-         * ---------
-         * Representa tudo que está dentro do AppProviders,
-         * que no caso é o componente App.
-         *
-         * Ao envolver o App com os Providers, garantimos que qualquer
-         * componente da aplicação possa acessar os estados globais
-         * (como carrinho e modal) diretamente via Context API.
-         */
         {children}
 
+        {/*
+          children:
+          ---------
+          Representa tudo que está dentro do AppProviders,
+          que no caso é o componente App.
+
+          Ao envolver o App com os Providers, garantimos que qualquer
+          componente da aplicação possa acessar os estados globais
+          (como carrinho e modal) diretamente via Context API.
+        */}
       </ModalProvider>
     </CartProvider>
   );
