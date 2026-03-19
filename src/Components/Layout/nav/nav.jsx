@@ -1,4 +1,11 @@
+/**
+ * Nav.jsx
+ * ----------------------------------------
+ * Componente responsável pela navegação do site.
+ */
+
 const Nav = ({ menu }) => {
+
   const links = [
     { label: "Home", href: "#hero" },
     { label: "Products", href: "#products" },
@@ -14,6 +21,7 @@ const Nav = ({ menu }) => {
       className={`
         fixed top-[72px] left-0 h-[calc(100%-72px)] w-64 bg-[#0d0d0d]
         transform transition-transform duration-300 ease-in-out z-50
+
         ${menu ? "translate-x-0" : "-translate-x-full"}
 
         min-[878px]:static
@@ -23,6 +31,8 @@ const Nav = ({ menu }) => {
         min-[878px]:bg-transparent
       `}
     >
+
+      {/* Lista de navegação */}
       <ul
         className="
           flex flex-col gap-6 p-8
@@ -31,8 +41,12 @@ const Nav = ({ menu }) => {
           min-[878px]:p-0
         "
       >
+
+        {/* Renderização dinâmica dos links */}
         {links.map((link) => (
           <li key={link.href}>
+
+            {/* Cada link navega para uma seção da página */}
             <a
               href={link.href}
               className="
@@ -46,6 +60,7 @@ const Nav = ({ menu }) => {
             </a>
           </li>
         ))}
+
       </ul>
     </nav>
   );
