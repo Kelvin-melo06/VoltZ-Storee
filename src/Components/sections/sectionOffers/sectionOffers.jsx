@@ -1,18 +1,54 @@
-import Card from "@/Components/ui/Card/card.jsx"
-import SectionTitle from "@/Components/ui/SectionTitle.jsx"
+/**
+ * SectionOffers.jsx
+ * ----------------------------------------
+ * Componente responsável por exibir o produto em oferta da semana.
+ *
+ * Diferente da SectionProducts (que renderiza vários itens),
+ * aqui exibimos apenas um único produto marcado como "offer".
+ */
+
+import Card from "@/Components/ui/Card/card.jsx";
+import SectionTitle from "@/Components/ui/SectionTitle.jsx";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { getProducts } from "@/services/products";
 
 const SectionOffers = () => {
 
+  /**
+   * Context API:
+   * ------------
+   * Acessa a função global de adicionar produtos ao carrinho.
+   */
   const { addToCart } = useContext(CartContext);
+
+  /**
+   * Estado local:
+   * -------------
+   * product -> armazena o produto em oferta.
+   * Começa como null até a API retornar os dados.
+   */
   const [product, setProduct] = useState(null);
 
+  /**
+   * useEffect:
+   * ----------
+   * Executado ao montar o componente.
+   *
+   * Responsável por:
+   * - Buscar todos os produtos (API fake)
+   * - Encontrar o produto com "offer: true"
+   * - Atualizar o estado com esse produto
+   */
   useEffect(() => {
-    async function loadOffer(){
+    async function loadOffer() {
       const data = await getProducts();
 
+      /**
+       * find:
+       * -----
+       * Retorna o primeiro produto que tiver "offer === true"
+       */
       const offerProduct = data.find(p => p.offer);
 
       setProduct(offerProduct);
@@ -21,20 +57,28 @@ const SectionOffers = () => {
     loadOffer();
   }, []);
 
-  if(!product) return null;
+  /**
+   * Renderização condicional:
+   * ------------------------
+   * Enquanto o produto não é carregado, não renderiza nada.
+   */
+  if (!product) return null;
 
   return (
     <section
+      id="offers"
       className="
       py-20
       px-[5%]
       bg-[#00BFFF]
       text-center
-      fade-up"
-      id="offers"
+      fade-up
+      "
     >
-
-      <SectionTitle>Ofertas Da Semana</SectionTitle>
+      {/* TÍTULO DA SEÇÃO */}
+      <SectionTitle>
+        Ofertas Da Semana
+      </SectionTitle>
 
       <div
         className="
@@ -46,6 +90,16 @@ const SectionOffers = () => {
         "
       >
 
+        {/**
+         * Card:
+         * -----
+         * Exibe o produto em oferta.
+         *
+         * Recebe:
+         * - Estilização
+         * - Texto do botão
+         * - Ação de adicionar ao carrinho
+         */}
         <Card
           className="
           group
@@ -82,64 +136,70 @@ const SectionOffers = () => {
           onButtonClick={() => addToCart(product)}
         >
 
+          {/* TAG DE DESCONTO */}
           <div
-          className="
-          absolute
-          top-4
-          right-1
-          bg-red-500
-          text-white
-          text-sm
-          font-bold
-          px-3
-          py-1
-          rounded-full
-          ">
+            className="
+            absolute
+            top-4
+            right-1
+            bg-red-500
+            text-white
+            text-sm
+            font-bold
+            px-3
+            py-1
+            rounded-full
+            "
+          >
             -17%
           </div>
 
+          {/* IMAGEM */}
           <div
-          className="
-          w-full
-          h-[250px]
-          bg-gradient-to-br
-          from-[#0D0D0D]
-          to-[#1A1A1A]
-          rounded-[15px]
-          mb-6
-          flex
-          items-center
-          justify-center
-          text-[4rem]
-          transition-all
-          duration-300
-          group-hover:scale-105
-          group-hover:drop-shadow-[0_0_20px_#00BFFF]
-
-          md:group-hover:scale-90
-
-          ">
+            className="
+            w-full
+            h-[250px]
+            bg-gradient-to-br
+            from-[#0D0D0D]
+            to-[#1A1A1A]
+            rounded-[15px]
+            mb-6
+            flex
+            items-center
+            justify-center
+            text-[4rem]
+            transition-all
+            duration-300
+            group-hover:scale-90
+            group-hover:drop-shadow-[0_0_20px_#00BFFF]
+            md:group-hover:scale-90
+            "
+          >
             {product.img}
           </div>
 
+          {/* NOME */}
           <h3
-          className="
-          font-['Orbitron']
-          text-[1.4rem]
-          font-semibold
-          mb-2
-          text-[#F2F2F2]
-          ">
+            className="
+            font-['Orbitron']
+            text-[1.4rem]
+            font-semibold
+            mb-2
+            text-[#F2F2F2]
+            "
+          >
             {product.name}
           </h3>
 
+          {/* PREÇO */}
           <p
-          className="
-          text-[1.4rem]
-          font-bold
-          text-white
-          mb-4
-          ">
+            className="
+            text-[1.4rem]
+            font-bold
+            text-white
+            mb-4
+            "
+          >
             R$ {product.price.toFixed(2)}
           </p>
 
