@@ -26,7 +26,7 @@ const Header = () => {
    * Acessa estados globais da aplicação sem necessidade de prop drilling.
    */
   const { cart } = useContext(CartContext);
-  const { openModal } = useContext(ModalContext);
+  const { toggleModal } = useContext(ModalContext);
 
   /**
    * cartCount:
@@ -83,7 +83,7 @@ const Header = () => {
               icone={FaShoppingCart}
               size={24}
               color="#00BFFF"
-              onClick={openModal}
+              onClick={toggleModal}
             />
 
             {/* Exibe quantidade apenas se houver itens */}

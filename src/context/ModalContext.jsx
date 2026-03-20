@@ -44,7 +44,7 @@ export default function ModalProvider({ children }) {
    * que sempre trabalhe com o valor mais atualizado.
    */
   const toggleModal = () => {
-    setIsModalOpen((prev) => !prev);
+    setIsModalOpen((prevModal) => !prevModal);
   };
 
   /**

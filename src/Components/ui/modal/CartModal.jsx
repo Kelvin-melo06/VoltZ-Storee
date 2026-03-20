@@ -26,11 +26,10 @@ const CartModal = () => {
    * Acessa:
    * - cart -> lista de produtos no carrinho
    * - removeFromCart -> função para remover itens
-   * - closeModal -> função para fechar o modal
    * - isModalOpen -> controla se o modal está aberto
    */
   const { cart, removeFromCart } = useContext(CartContext);
-  const { toggleModal, isModalOpen } = useContext(ModalContext);
+  const { isModalOpen, toggleModal } = useContext(ModalContext);
 
   /**
    * useEffect - Tecla ESC:
@@ -41,18 +40,16 @@ const CartModal = () => {
    * Se pressionado, o modal é fechado.
    */
   useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === "Escape") toggleModal();
-    };
+  const handleEsc = (e) => {
+    if (e.key === "Escape" && isModalOpen) {
+      toggleModal();
+    }
+  };
 
-    window.addEventListener("keydown", handleEsc);
+  window.addEventListener("keydown", handleEsc);
 
-    /**
-     * Cleanup:
-     * Remove o listener ao desmontar o componente
-     */
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, [isModalOpen,toggleModal]);
+  return () => window.removeEventListener("keydown", handleEsc);
+}, [isModalOpen]);
 
   /**
    * Renderização condicional:
